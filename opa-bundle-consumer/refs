@@ -5,3 +5,9 @@ https://www.openpolicyagent.org/docs/latest/docker-authorization/
 
 // connect to localhost from inside docker contaoner
 https://www.howtogeek.com/devops/how-to-connect-to-localhost-within-a-docker-container/
+
+// opa issue refs
+https://github.com/open-policy-agent/opa/issues/3181
+https://github.com/open-policy-agent/opa/issues/2964
+https://github.com/open-policy-agent/opa/issues/5737
+https://github.com/open-policy-agent/opa/issues/2363
