@@ -1,0 +1,78 @@
+// health
+curl --location 'http://localhost:6969/opa-bundle-consumer/hello'
+
+-------------------------------------------------------------------------------------------
+// app end point
+curl --location 'http://localhost:6969/opa-bundle-consumer/check-access/admin' \
+--header 'Content-Type: application/json' \
+--data '{
+    "userName":"yashas"
+}'
+
+-------------------------------------------------------------------------------------------
+
+// opa end points
+via deployment of  opa-service.yaml
+curl --location 'http://localhost:8282/v1/data/play/user_is_admin' \
+--header 'Content-Type: application/json' \
+--data '{
+    "input": {
+        "user": "yashas"
+    }
+}'
+
+-------------------------------------------------------------------------------------------
+
+download bundle from
+http://docker.for.mac.localhost:9090/bundle-provider/download/policies.tar.gz
+
+and run
+./opa run -s -b policies.tar.gz
+
+curl:
+
+curl --location 'http://localhost:8181/v1/data/play/user_is_admin' \
+--header 'Content-Type: application/json' \
+--data '{
+    "input": {
+        "user": "yashas"
+    }
+}'
+
+-------------------------------------------------------------------------------------------
+
+
+./opa run -s policies.tar.gz
+
+curl --location 'http://localhost:8181/v1/data/play/user_is_admin' \
+--header 'Content-Type: application/json' \
+--data '{
+    "input": {
+        "user": "yashas"
+    }
+}'
+
+-------------------------------------------------------------------------------------------
+
+./opa run -s --config-file bundle-config-local.yaml
+
+
+{"addrs":[":8181"],"diagnostic-addrs":[],"level":"info","msg":"Initializing server.","time":"2023-04-19T23:00:32+05:30"}
+{"level":"info","msg":"Starting bundle loader.","name":"authz","plugin":"bundle","time":"2023-04-19T23:00:32+05:30"}
+{"level":"info","msg":"Bundle loaded and activated successfully.","name":"authz","plugin":"bundle","time":"2023-04-19T23:00:32+05:30"}
+
+curl:
+
+curl --location 'http://localhost:8181/v1/data/play/user_is_employee' \
+--header 'Content-Type: application/json' \
+--data '{
+    "input": {
+        "user": "bob"
+    }
+}'
+
+
+
+
+
+

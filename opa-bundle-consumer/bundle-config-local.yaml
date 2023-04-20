@@ -1,0 +1,11 @@
+services:
+  - name: bundleService
+    url: http://docker.for.mac.localhost:9090/bundle-provider
+bundles:
+  authz:
+    service: bundleService
+    resource: download/policies.tar.gz
+    polling:
+      min_delay_seconds: 10
+      max_delay_seconds: 20
+

@@ -1,0 +1,2 @@
+docker build . -t bundle-provider-app
+docker run -p 9090:8080 bundle-provider-app

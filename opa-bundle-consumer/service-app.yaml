@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: bundle-consumer-app
+  ports:
+    - protocol: "TCP"
+      #      host port
+      port: 6969
+      #      cluster target port
+      targetPort: 8080

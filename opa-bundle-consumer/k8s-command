@@ -1,0 +1,11 @@
+kubectl create configmap policy-config --from-file bundle-config-local.yaml
+
+// platform specific opa container
+docker pull --platform linux/x86_64 openpolicyagent/opa:0.51.0
+
+kubectl delete all --all
+
+kubectl create -f deployment-opa.yaml
+
+// platform specific opa container
+docker pull --platform linux/x86_64 openpolicyagent/opa:0.51.0

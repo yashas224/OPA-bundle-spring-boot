@@ -1,0 +1,14 @@
+start:
+{"level":"info","msg":"Bundle loaded and activated successfully.","name":"authz","plugin":"bundle","time":"2023-04-19T17:21:17Z"}
+{"client_addr":"10.1.0.1:35158","level":"info","msg":"Received request.","req_id":760,"req_method":"GET","req_path":"/","time":"2023-04-19T17:21:21Z"}
+{"client_addr":"10.1.0.1:35144","level":"info","msg":"Received request.","req_id":761,"req_method":"GET","req_path":"/health","time":"2023-04-19T17:21:21Z"}
+{"client_addr":"10.1.0.1:35158","level":"info","msg":"Sent response.","req_id":760,"req_method":"GET","req_path":"/","resp_bytes":1424,"resp_duration":1.071833,"resp_status":200,"time":"2023-04-19T17:21:21Z"}
+{"client_addr":"10.1.0.1:35144","level":"info","msg":"Sent response.","req_id":761,"req_method":"GET","req_path":"/health","resp_bytes":3,"resp_duration":3.698875,"resp_status":200,"time":"2023-04-19T17:21:21Z"}
+
+
+
+end:
+{"level":"info","msg":"Shutting down...","time":"2023-04-19T17:37:26Z"}
+{"level":"info","msg":"Server shutdown.","time":"2023-04-19T17:37:26Z"}
+{"level":"info","msg":"Stopping bundle loader.","name":"authz","plugin":"bundle","time":"2023-04-19T17:37:26Z"}
+
