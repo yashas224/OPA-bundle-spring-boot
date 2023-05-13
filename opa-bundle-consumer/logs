@@ -1,0 +1,13 @@
+// when using bundle-config-local-credentials-oauth2.yaml
+
+// when oauth2 fails due to wrong info passed to the token server
+
+{"level":"error","msg":"Bundle load failed: request failed: error in response from OAuth2 token endpoint: {\"error\":\"access_denied\",\"error_description\":\"Service not enabled within domain: https://dev-vmfs2xsxy47w5vfr.us.auth0.com/api/v3/\"}","name":"authz","plugin":"bundle","time":"2023-05-13T18:07:39Z"}
+{"client_addr":"10.1.0.1:57666","level":"info","msg":"Received request.","req_id":63,"req_method":"GET","req_path":"/","time":"2023-05-13T18:07:40Z"}
+{"client_addr":"10.1.0.1:57666","level":"info","msg":"Sent response.","req_id":63,"req_method":"GET","req_path":"/","resp_bytes":1424,"resp_duration":3.198375,"resp_status":200,"time":"2023-05-13T18:07:40Z"}
+{"client_addr":"10.1.0.1:57670","level":"info","msg":"Received request.","req_id":64,"req_method":"GET","req_path":"/health","time":"2023-05-13T18:07:40Z"}
+{"client_addr":"10.1.0.1:57670","level":"info","msg":"Sent response.","req_id":64,"req_method":"GET","req_path":"/health","resp_bytes":50,"resp_duration":16.334208,"resp_status":500,"time":"2023-05-13T18:07:40Z"}
+
+
+no request is made to bundle service url to fetch bundle.
+

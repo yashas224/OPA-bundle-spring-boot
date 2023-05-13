@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.*;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
 import java.net.InetAddress;
@@ -37,9 +34,10 @@ public class BundleProviderController {
   Logger logger = Logger.getLogger(BundleProviderController.class.getName());
 
   @GetMapping("/download/{bundleName}")
-  public ResponseEntity getBundle(@PathVariable(name = "bundleName") String passedBundleName) {
+  public ResponseEntity getBundle(@PathVariable(name = "bundleName") String passedBundleName, @RequestHeader HttpHeaders requestHeaders) {
 
     logger.info("invoking bundle-provider download end point !!! ");
+    logger.info("Request Headers ".concat(requestHeaders.toString()));
     if(!passedBundleName.equals(bundleName)) {
       return ResponseEntity.badRequest().body("Bundle not found !!");
     }
@@ -57,12 +55,15 @@ public class BundleProviderController {
   }
 
   private void deleteExistingPolicytarFile() {
-    logger.info("Deleting existing policies.tar.gz   !!! ");
 
     String dir = System.getProperty("user.dir");
     var file = new File(dir.concat("/policies.tar.gz"));
     if(file.exists()) {
+      logger.info("Deleting existing policies.tar.gz   !!! ");
       file.delete();
+    }else{
+      logger.info(" policies.tar.gz Does not  exist !!! ");
+
     }
   }
 }

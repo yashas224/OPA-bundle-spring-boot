@@ -11,3 +11,25 @@ https://github.com/open-policy-agent/opa/issues/3181
 https://github.com/open-policy-agent/opa/issues/2964
 https://github.com/open-policy-agent/opa/issues/5737
 https://github.com/open-policy-agent/opa/issues/2363
+https://github.com/orgs/open-policy-agent/discussions/395
+
+
+// discussions related to OPA credentials in bundle server config
+https://github.com/open-policy-agent/opa/issues/3950
+https://github.com/orgs/open-policy-agent/discussions/408
+
+
+anderseknert
+2 hours ago
+Maintainer
+The bearer token retrieved from a successful client_credentials autentication is put in the Authorization header of the outgoing request, as per the OAuth2 specification.
+
+OPA reaches out to token_url with the provided client credentials (client_id and client_secret).
+On successful authentication, the token server returns a bearer token to OPA.
+OPA puts the bearer token in the Authorization header in the request to fetch a bundle.
+
+
+
+// oauth2 testing:
+https://auth0.com/docs/get-started/authentication-and-authorization-flow/call-your-api-using-the-client-credentials-flow
+https://backstage.forgerock.com/docs/am/7/oauth2-guide/oauth2-client-cred-grant.html

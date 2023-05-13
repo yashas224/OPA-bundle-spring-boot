@@ -1,0 +1,19 @@
+// with bundle-config-local-credentials-bearer-token.yaml used in opa-bundle-consumer
+
+
+2023-05-13 16:38:16.074  INFO 1 --- [nio-8080-exec-5] c.p.b.o.c.BundleProviderController       : invoking bundle-provider download end point !!!
+2023-05-13 16:38:16.077  INFO 1 --- [nio-8080-exec-5] c.p.b.o.c.BundleProviderController       : Request Headers [host:"docker.for.mac.localhost:9090", user-agent:"Open Policy Agent/0.51.0 (linux, amd64)", authorization:"Bearer bearer-token-test-210461c6-b22c-419c-a3d1-56ea5744d591", prefer:"modes=snapshot,delta", accept-encoding:"gzip"]
+2023-05-13 16:38:16.078  INFO 1 --- [nio-8080-exec-5] c.p.b.o.c.BundleProviderController       :  policies.tar.gz Does not  exist !!!
+2023-05-13 16:38:16.078  INFO 1 --- [nio-8080-exec-5] .s.BundleProviderLinuxCommandServiceImpl : Generating .tar.gz file using linux command .
+2023-05-13 16:38:31.095  INFO 1 --- [nio-8080-exec-6] c.p.b.o.c.BundleProviderController       : invoking bundle-provider download end point !!!
+2023-05-13 16:38:31.095  INFO 1 --- [nio-8080-exec-6] c.p.b.o.c.BundleProviderController       : Request Headers [host:"docker.for.mac.localhost:9090", user-agent:"Open Policy Agent/0.51.0 (linux, amd64)", authorization:"Bearer bearer-token-test-210461c6-b22c-419c-a3d1-56ea5744d591", prefer:"modes=snapshot,delta", accept-encoding:"gzip"]
+2023-05-13 16:38:31.095  INFO 1 --- [nio-8080-exec-6] c.p.b.o.c.BundleProviderController       : Deleting existing policies.tar.gz   !!!
+2023-05-13 16:38:31.096  INFO 1 --- [nio-8080-exec-6] .s.BundleProviderLinuxCommandServiceImpl : Generating .tar.gz file using linux command .
+
+
+// with bundle-config-local-credentials-oauth2.yaml  used in opa-bundle-consumer
+
+2023-05-13 18:13:25.675  INFO 1 --- [nio-8080-exec-7] c.p.b.o.c.BundleProviderController       : invoking bundle-provider download end point !!!
+2023-05-13 18:13:25.675  INFO 1 --- [nio-8080-exec-7] c.p.b.o.c.BundleProviderController       : Request Headers [host:"docker.for.mac.localhost:9090", user-agent:"Open Policy Agent/0.51.0 (linux, amd64)", authorization:"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjU2RTlKNHFBU2dlb3Ixc04xYVU5ZiJ9.eyJpc3MiOiJodHRwczovL2Rldi12bWZzMnhzeHk0N3c1dmZyLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnNzJLMHJ3eGFreGlTNDROdDFrSVNNb29QSFdMbmpGdUBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kZXYtdm1mczJ4c3h5NDd3NXZmci51cy5hdXRoMC5jb20vYXBpL3YyLyIsImlhdCI6MTY4NDAwMTQ2NSwiZXhwIjoxNjg0MDg3ODY1LCJhenAiOiJnNzJLMHJ3eGFreGlTNDROdDFrSVNNb29QSFdMbmpGdSIsInNjb3BlIjoicmVhZDp1c2VycyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.HtY4fnjdRXtUNa8iLou97lc6RentAsVPE-GawGuSgzyP4KlErC-ujKTAcjJQa7Ss0ujmw8gBVcJ5A2F2F2iA274sV0GxAxasNDizv9d-VKIt3L4sAaU2cuDhNATuL9SW9-CTCp0dPeFnLi0TpbiFppfMrb_kvK-xOiFANnpu9PhC9TRZ_GISRNIHc8F3ns1ocdVCJkonOy59cfwsTT0V_TCYxVEhdSm9Q-cJW_UOR2nLYkw7EPAOHSG2H84VfKnyIcd0lnqWrTl93o0k14iQGVWW3oSWEsOpL684Ilzq91NVLvpX7WT2moGKgBOScBkaG8UrAbm21Z6apt0W7TSkVA", prefer:"modes=snapshot,delta", accept-encoding:"gzip"]
+2023-05-13 18:13:25.676  INFO 1 --- [nio-8080-exec-7] c.p.b.o.c.BundleProviderController       : Deleting existing policies.tar.gz   !!!
+2023-05-13 18:13:25.677  INFO 1 --- [nio-8080-exec-7] .s.BundleProviderLinuxCommandServiceImpl : Generating .tar.gz file using linux command .
